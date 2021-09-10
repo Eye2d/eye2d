@@ -6,11 +6,11 @@ namespace eye2d.app_data.Entities
 {
     public class Cart
     {
-        public int id { set; get; }
-        public object Id { get; internal set; }
+        public int Id { set; get; }
         public int? ProductId { set; get; }
         public int Quantity { set; get; }
         public float Price { set; get; }
+        public Product Product { get; set; }
     }
 
 }

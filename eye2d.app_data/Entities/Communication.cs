@@ -12,6 +12,6 @@ namespace eye2d.app_data.Entities
         public float Chat { set; get; }
         public float Video { set; get; }
         public CommunicationStatus Status { set; get; }
-
+        public object CommunicationStatus { get; internal set; }
     }
 }

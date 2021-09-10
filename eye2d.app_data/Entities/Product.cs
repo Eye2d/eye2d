@@ -10,14 +10,14 @@ namespace eye2d.app_data.Entities
        public decimal Price { set; get; }
         public decimal OriginalPrice { set; get; }
         public int Stock { set; get; }
-        public int Viewcount { set; get; }
-        public object ViewCount { get; internal set; }
+        public int ViewCount { set; get; }
         public DateTime DateCreated { set; get; }
         public DateTime DateUpdate { set; get; }
         public String SeoAlias { set; get; }
         public List<ProductInCategory> ProductInCategories { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
-        public Product Product { get; set; }
+        public List<Cart> Carts { get; set; }
+        public List <ProductTranslation> ProductTranslations { get; set; }
 
 
     }

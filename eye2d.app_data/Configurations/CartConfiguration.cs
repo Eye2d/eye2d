@@ -7,7 +7,7 @@ using System.Text;
 
 namespace eye2d.app_data.Configurations
 {
-    public class CartConfiguration : IEntityTypeConfigutation<Cart>
+    public class CartConfiguration : IEntityTypeConfiguration<Cart>
     {
 
         public void Configure(EntityTypeBuilder<Cart> builder)

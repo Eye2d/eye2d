@@ -17,7 +17,8 @@ namespace eye2d.app_data.Entities
         public String SeoAlias { set; get; }
         public List<ProductInCategory> ProductInCategories { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
-        public Product Product { get; set; }
+        public List<Cart> Carts { get; set; }
+        public List<ProductTranslation> ProductTranslations { get; set; }
 
 
     }

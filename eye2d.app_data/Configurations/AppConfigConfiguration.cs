@@ -9,17 +9,11 @@ namespace eye2d.app_data.Configurations
 {
     public class AppConfigConfiguration : IEntityTypeConfiguration<AppConfig>
     {
-        public void configure(EntityTypeBuilder<AppConfig> builder)
+        public void Configure(EntityTypeBuilder<AppConfig> builder)
         {
             builder.ToTable("AppConfigs");
             builder.HasKey(x => x.Key);
             builder.Property(x => x.Value).IsRequired(true);
-
-        }
-
-        public void Configure(EntityTypeBuilder<AppConfig> builder)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace eye2d.app_data.Configurations
 {
-    public class ProductInCategoryConfiguration : IEntityTypeConfigutation<ProductInCategory>
+    public class ProductInCategoryConfiguration : IEntityTypeConfiguration<ProductInCategory>
     {
         public void Configure(EntityTypeBuilder<ProductInCategory> builder)
         {

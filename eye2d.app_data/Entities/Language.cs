@@ -6,7 +6,7 @@ namespace eye2d.app_data.Entities
 {
     public class Language
     {
-        public string Id { set; get; }
+        public int Id { set; get; }
         public string Name { set; get; }
         public bool IsDefault { set; get; }
         public List<ProductTranslation> ProductTranslations { get; set; }

@@ -1,7 +1,0 @@
-Tạo Solution structure: 
-- Create new branch for GIT
-- Git flow: Master --> Develop--> feature/solution_folder --> create pull request --> develop --> bugfix/fix_erro_start-->creat pull request to develop
-- Solution structure:
-	+ N layer (Data, Business, Presentation) - Data Driven Design
-	+ DDD (Domain driven Design) - Phương thức tốt để triển khai cho mỗi ứng dụng một kiểu thức khác nhau
-- Web Application --> Request pipeline

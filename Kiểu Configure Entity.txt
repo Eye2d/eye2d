@@ -1,3 +1,0 @@
-- Configure entity:
-	+ Attribute configuration
-	+ fluent API configuration	

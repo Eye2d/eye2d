@@ -18,7 +18,6 @@ namespace eye2d.app_data.Entity_framwork
                 .Build();
 
             var connectionString = configuration.GetConnectionString("Eye2dDb");
-
             var optionsBuilder = new DbContextOptionsBuilder<Eye2d_DBcontext>();
             optionsBuilder.UseSqlServer(connectionString);
 

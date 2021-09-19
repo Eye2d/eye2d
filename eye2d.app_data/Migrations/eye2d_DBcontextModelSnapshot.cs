@@ -9,6 +9,7 @@ using eye2d.app_data.Entity_framwork;
 namespace eye2d.app_data.Migrations
 {
     [DbContext(typeof(Eye2d_DBcontext))]
+
     partial class eye2d_DBcontextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

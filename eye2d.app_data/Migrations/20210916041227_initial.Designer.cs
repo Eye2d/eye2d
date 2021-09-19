@@ -10,6 +10,7 @@ using eye2d.app_data.Entity_framwork;
 namespace eye2d.app_data.Migrations
 {
     [DbContext(typeof(Eye2d_DBcontext))]
+
     [Migration("20210916041227_initial")]
     partial class initial
     {

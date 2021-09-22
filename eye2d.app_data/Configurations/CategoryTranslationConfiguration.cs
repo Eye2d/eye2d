@@ -7,9 +7,9 @@ using System.Text;
 
 namespace eye2d.app_data.Configurations
 {
-    public class CategoryTransactionConfiguration : IEntityTypeConfiguration<CategoryTransaction>
+    public class CategoryTranslationConfiguration : IEntityTypeConfiguration<CategoryTranslation>
     {
-        public void Configure(EntityTypeBuilder<CategoryTransaction> builder)
+        public void Configure(EntityTypeBuilder<CategoryTranslation> builder)
         {
             builder.ToTable("CategoriesTransactions");
             builder.HasKey(x => new { x.CategoryId, x.LanguageId });

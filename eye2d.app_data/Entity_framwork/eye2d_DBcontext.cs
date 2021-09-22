@@ -14,17 +14,17 @@ namespace eye2d.app_data.Entity_framwork
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new AppConfigConfiguratation());
-            modelBuilder.ApplyConfiguration(new ProductConfiguratation());
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
-            modelBuilder.ApplyConfiguration(new CartConfiguratation());
-            modelBuilder.ApplyConfiguration(new OrderConfiguratation());
-            modelBuilder.ApplyConfiguration(new OrderDetailConfiguratation());
-            modelBuilder.ApplyConfiguration(new TransactionConfiguratation());
-            modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguratation());
-            modelBuilder.ApplyConfiguration(new ContactConfiguratation());
-            modelBuilder.ApplyConfiguration(new LanguageConfiguratation());
-            modelBuilder.ApplyConfiguration(new ProductTransactionConfiguratation());
+            modelBuilder.ApplyConfiguration(new CartConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ContactConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             // Configure Code First to ignore PluralizingTableName convention
             // If you keep this convention then the generated tables will have pluralized names.
             // base.OnModelCreating(ModuleBuilder);
@@ -36,8 +36,8 @@ namespace eye2d.app_data.Entity_framwork
         public DbSet<AppConfig> Configurations { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<ProductTransaction> ProductTransactions { get; set; }
-        public DbSet<CategoryTransaction> CategoriesTransactions { get; set; }
+        public DbSet<ProductTranslation> ProductTransactions { get; set; }
+        public DbSet<CategoryTranslation> CategoriesTransactions { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<OrderDetail> Ordetails { get; set; }
         public DbSet<SystemActivity> SystemActivities { get; set; }

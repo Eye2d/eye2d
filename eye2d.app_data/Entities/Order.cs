@@ -17,5 +17,6 @@ namespace eye2d.app_data.Entities
         public string ShipPhoneNumber { set; get; }
         public OrderStatus Status { set; get; }
         public List<OrderDetail> OrderDetails { get; set; }
+        public List<AppUser> AppUsers { get; set; }
     }
 }

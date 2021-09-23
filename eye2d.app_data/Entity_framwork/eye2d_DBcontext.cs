@@ -1,5 +1,8 @@
 ﻿using eye2d.app_data.Configurations;
 using eye2d.app_data.Entities;
+using eye2d.app_data.Extension;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,9 +10,9 @@ using System.Text;
 
 namespace eye2d.app_data.Entity_framwork
 {
-    public class eye2d_DBcontext: DbContext
+    public class Eye2d_DBcontext : IdentityDbContext<AppRole,AppUser,Guid>
     {
-        public eye2d_DBcontext(DbContextOptions options) : base(options)
+        public Eye2d_DBcontext(DbContextOptions options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,6 +28,20 @@ namespace eye2d.app_data.Entity_framwork
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
+
+            modelBuilder.ApplyConfiguration(new CategoryTranslationConfiguration());
+            
+            modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
+
+            
+            modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("AppUserRoles").HasKey(x=>new { x.UserId, x.RoleId });
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x=>x.UserId);
+            modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
+            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x => x.UserId);
+
+            modelBuilder.Seed();
             // Configure Code First to ignore PluralizingTableName convention
             // If you keep this convention then the generated tables will have pluralized names.
             // base.OnModelCreating(ModuleBuilder);
@@ -36,41 +53,14 @@ namespace eye2d.app_data.Entity_framwork
         public DbSet<AppConfig> Configurations { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<ProductTranslation> ProductTransactions { get; set; }
-        public DbSet<CategoryTranslation> CategoriesTransactions { get; set; }
+
+        public DbSet<ProductTranslation> ProductTranslations { get; set; }
+        public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<OrderDetail> Ordetails { get; set; }
-        public DbSet<SystemActivity> SystemActivities { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Language> Languages { get; set; }
     }
 
-    internal class OrderDetailConfiguratation
-    {
-        public OrderDetailConfiguratation()
-        {
-        }
-    }
-
-    internal class OrderConfiguratation
-    {
-        public OrderConfiguratation()
-        {
-        }
-    }
-
-    internal class CartConfiguratation
-    {
-        public CartConfiguratation()
-        {
-        }
-    }
-
-    internal class ProductConfiguratation
-    {
-        public ProductConfiguratation()
-        {
-        }
-    }
 }

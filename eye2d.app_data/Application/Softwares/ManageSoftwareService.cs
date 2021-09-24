@@ -37,7 +37,7 @@ namespace eye2d.app_data.Application.Softwares
             throw new NotImplementedException();
         }
 
-        public async Task<PagedViewModel<SoftwareViewModel>> GetAllPaging(string keyword, int pageIndex, int pageSize)
+        public async Task<PagedResult<SoftwareViewModel>> GetAllPaging(GetProductPagingRequest request)
         {
             throw new NotImplementedException();
         }

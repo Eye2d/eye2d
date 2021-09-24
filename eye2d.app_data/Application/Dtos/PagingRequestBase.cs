@@ -4,9 +4,10 @@ using System.Text;
 
 namespace eye2d.app_data.Application.Dtos
 {
-    public class PagedViewModel<T>
+    public class PagingRequestBase
+
     {
-        public List<T> Items { set; get; }
-        public int TotalRecord { set; get; }
+        public int PageIndex { get; set; }
+        public int PageSize { get; set; }
     }
 }

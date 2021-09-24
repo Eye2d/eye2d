@@ -13,7 +13,7 @@ namespace eye2d.app_data.Application.Softwares
         Task<int> Update(SoftwareEditRequest request);
         Task<int> Delete(int productId);
         Task<List<SoftwareViewModel>> GetAll();
-        Task<PagedViewModel<SoftwareViewModel>> GetAllPaging(string keyword, int pageIndex, int pageSize);
+        Task<PagedResult<SoftwareViewModel>> GetAllPaging(GetProductPagingRequest request);
 
     }
 }

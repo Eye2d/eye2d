@@ -16,7 +16,11 @@ namespace eye2d.app_data.Configurations
             builder.Property(x => x.UserId);
             builder.Property(x => x.Chat);
             builder.Property(x => x.Video);
+<<<<<<< HEAD
             
+=======
+            builder.Property(x => x.CommunicationStatus);
+>>>>>>> Feature/database_design
         }
     }
 }

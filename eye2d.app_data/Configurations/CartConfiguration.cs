@@ -15,8 +15,13 @@ namespace eye2d.app_data.Configurations
             builder.ToTable("Carts");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
+<<<<<<< HEAD
             builder.HasOne(x => x.Product).WithMany(x=> x.Carts).HasForeignKey(x=> x.ProductId);
             builder.HasOne(x => x.AppUser).WithMany(x => x.Carts).HasForeignKey(x => x.UserId);
+=======
+
+            builder.HasOne(x => x.Product).WithMany(x => x.Carts).HasForeignKey(x => x.ProductId);
+>>>>>>> Feature/database_design
 
         }
     } 

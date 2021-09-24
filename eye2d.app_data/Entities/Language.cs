@@ -11,5 +11,6 @@ namespace eye2d.app_data.Entities
         public bool IsDefault { set; get; }
         public List<ProductTranslation> ProductTranslations { get; set; }
         public List<CategoryTranslation> CategoryTranslations { get; set; }
+
     }
 }

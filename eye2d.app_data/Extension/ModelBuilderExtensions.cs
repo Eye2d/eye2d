@@ -214,22 +214,8 @@ namespace eye2d.app_data.Extension
                 NormalizedName = "admin",
                 Description = "Administrator role"
             });
+               
 
-            var hasher = new PasswordHasher<AppUser>();
-            modelBuilder.Entity<AppUser>().HasData(new AppUser
-            {
-                Id = adminId,
-                UserName = "admin",
-                NormalizedUserName = "admin",
-                Email = "tedu.international@gmail.com",
-                NormalizedEmail = "tedu.international@gmail.com",
-                EmailConfirmed = true,
-                PasswordHash = hasher.HashPassword(null, "Abcd1234$"),
-                SecurityStamp = string.Empty,
-                FirstName = "Toan",
-                LastName = "Bach",
-                DoB = new DateTime(2020, 01, 31)
-            });
 
             modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
             {

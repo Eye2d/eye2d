@@ -15,7 +15,6 @@ namespace eye2d.app_data.Configurations
             builder.HasOne(x => x.Order).WithMany(x => x.OrderDetails).HasForeignKey(x => x.OrderId);
             builder.HasKey(x => new { x.OrderId, x.ProductId });
             builder.HasOne(x => x.Product).WithMany(x => x.OrderDetails).HasForeignKey(x => x.ProductId);
-            builder.Property(x => x.Quantity).IsRequired().HasDefaultValue<int>(0);
         }
     }
 }

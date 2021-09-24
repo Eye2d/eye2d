@@ -25,11 +25,6 @@ namespace eye2d.app_data.Entity_framwork
 
             return new Eye2d_DBcontext(optionsBuilder.Options);
 
-            var optionsBuilder = new DbContextOptionsBuilder<Eye2d_DBcontext>();
-            optionsBuilder.UseSqlServer(connectionString);
-
-            return new Eye2d_DBcontext(optionsBuilder.Options);
-
         }
     }
 }

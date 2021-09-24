@@ -24,7 +24,7 @@ namespace eye2d.app_data.Application.Softwares
                 Price = request.Price,
             };
             _context.Products.Add(product);
-            return await _context.SaveChangesAsync()
+            return await _context.SaveChangesAsync();
         }
 
         public async Task<int> Delete(int productId)

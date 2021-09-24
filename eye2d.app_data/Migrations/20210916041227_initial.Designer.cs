@@ -9,12 +9,9 @@ using eye2d.app_data.Entity_framwork;
 
 namespace eye2d.app_data.Migrations
 {
-<<<<<<< HEAD
+
     [DbContext(typeof(Eye2d_DBcontext))]
 
-=======
-    [DbContext(typeof(eye2d_DBcontext))]
->>>>>>> Feature/database_design
     [Migration("20210916041227_initial")]
     partial class initial
     {

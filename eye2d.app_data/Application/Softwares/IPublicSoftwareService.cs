@@ -8,6 +8,6 @@ namespace eye2d.app_data.Application.Softwares
 {
     public interface IPublicSoftwareService
     {
-        PagedViewModel<SoftwareViewModel> GetAllByCategoryId(int categoryId, int pageIndex, int pageSize)
+        PagedViewModel<SoftwareViewModel> GetAllByCategoryId(int categoryId, int pageIndex, int pageSize);
     }
 }

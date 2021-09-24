@@ -7,7 +7,9 @@ namespace eye2d.app_data.Entities
     public class ProductTranslation
     {
         public int Id { set; get; }
+
         public int ProductId { set; get; }
+
         public string Name { set; get; }
         public string Description { set; get; }
         public string Details { set; get; }
@@ -17,6 +19,7 @@ namespace eye2d.app_data.Entities
         public string LanguageId { set; get; }
         public Product Product { get; set; }
         public Language Language { get; set; }
+
 
     }
 }

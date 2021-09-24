@@ -17,5 +17,6 @@ namespace eye2d.app_data.Entities
         public List <CategoryTranslation> CategoryTranslations { get; set; }
         
 
+
     }
 }

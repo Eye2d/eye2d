@@ -67,6 +67,7 @@ namespace eye2d.app_data.Entity_framwork
         public DbSet<AppConfig> AppConfigs { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
+
         public DbSet<ProductTranslation> ProductTranslations { get; set; }
         public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
         public DbSet<Promotion> Promotions { get; set; }

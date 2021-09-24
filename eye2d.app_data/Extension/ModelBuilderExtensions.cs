@@ -18,7 +18,7 @@ namespace eye2d.app_data.Extension
                 new AppConfig() { Key = "HomeDesciption", Value = "This is a testing description database model" }
                 );
             modelBuilder.Entity<Language>().HasData(
-                new Language() { Id="en-EN", Name="English", IsDefault=true},
+                new Language() { Id = "en-US", Name="English", IsDefault=true},
                 new Language() { Id = "vi-VN", Name = "Tiếng Việt", IsDefault = false }
                 );
             modelBuilder.Entity<Category>().HasData(

@@ -12,7 +12,8 @@ using System.Text;
 
 namespace eye2d.app_data.Entity_framwork
 {
-    public class Eye2d_DBcontext : IdentityDbContext<AppRole,AppUser,Guid>
+    public class Eye2d_DBcontext : IdentityDbContext<AppUser, AppRole, Guid>
+    
     {
         public Eye2d_DBcontext(DbContextOptions options) : base(options)
         {

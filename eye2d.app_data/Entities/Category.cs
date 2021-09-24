@@ -13,12 +13,9 @@ namespace eye2d.app_data.Entities
         public int? ParentId { set; get; }
         public Status Status { set; get; }
         public List<ProductInCategory> ProductInCategories { get; set; }
-<<<<<<< HEAD
-        public List<CategoryTranslation> CategoryTranslation { get; set; }
-=======
+
         public List <CategoryTranslation> CategoryTranslations { get; set; }
         
->>>>>>> Feature/database_design
 
     }
 }

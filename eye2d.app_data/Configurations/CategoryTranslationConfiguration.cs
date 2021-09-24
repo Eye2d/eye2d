@@ -20,11 +20,9 @@ namespace eye2d.app_data.Configurations
             builder.Property(x => x.SeoTitle).HasMaxLength(200);
             builder.Property(x => x.LanguageId).IsUnicode(false).IsRequired().HasMaxLength(5);
             builder.HasOne(x => x.Language).WithMany(x => x.CategoryTranslations).HasForeignKey(x => x.LanguageId);
-<<<<<<< HEAD
-            builder.HasOne(x => x.Category).WithMany(x => x.CategoryTranslations).HasForeignKey(x => x.CategoryId); 
-=======
+
             builder.HasOne(x => x.Category).WithMany(x => x.CategoryTranslations).HasForeignKey(x => x.CategoryId);
->>>>>>> Feature/database_design
+
 
         }
     }
